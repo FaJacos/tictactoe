@@ -25,4 +25,26 @@ public class board extends tictactoe{
             }
         }
     }
+
+    public String[][] getBoard(){
+        return gameBoard;
+    }
+    
+    public boolean spaceAvail(int y, int x){
+        if (gameBoard[y][x] == "-"){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    public boolean set(int y, int x, String player){
+        if (spaceAvail(y,x) == true){
+            gameBoard[y][x] = player;
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }
